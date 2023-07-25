@@ -6,7 +6,7 @@ Ce projet est le site internet du Club Potager Solidaire du Lycée René Cassin 
 
 ## Aperçu du site
 
-[Lien vers le site internet](potager-lyceerenecassin.legtux.org)
+[Lien vers le site internet](https://potager-lyceerenecassin.legtux.org)
 
 ## Fonctionnalités
 
