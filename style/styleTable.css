@@ -1,0 +1,135 @@
+/*█████████████████████████████ Polices ██████████████████████████████*/
+
+@font-face {
+	font-family: 'Titre';
+	src: url('/fonts/oswald/Oswald-Light.ttf');
+}
+
+@font-face {
+	font-family: 'Logo';
+	src: url('/fonts/typeecon.otf');
+}
+
+@font-face {
+	font-family: 'AvenirMedium';
+	src: url('/fonts/avenir-next/AvenirNextCyr-Medium.ttf');
+		:url('/fonts/avenir-next/AvenirNextCyr-MediumItalic.ttf');
+}
+
+@font-face {
+	font-family: 'AvenirHeavy';
+	src: url('/fonts/avenir-next/AvenirNextCyr-Heavy.ttf');
+		:url('/fonts/avenir-next/AvenirNextCyr-HeavyItalic.ttf');
+}
+
+@font-face {
+	font-family: 'AvenirDemi';
+	src: url('/fonts/avenir-next/AvenirNextCyr-Demi.ttf');
+		:url('/fonts/avenir-next/AvenirNextCyr-DemiItalic.ttf');
+}
+
+@font-face {
+	font-family: 'AvenirBold';
+	src: url('/fonts/avenir-next/AvenirNextCyr-Bold.ttf');
+		:url('/fonts/avenir-next/AvenirNextCyr-BoldItalic.ttf');
+}
+
+@font-face {
+	font-family: 'AvenirNormal';
+	src: url('/fonts/avenir-next/AvenirNextCyr-Regular.ttf');
+		:url('/fonts/avenir-next/AvenirNextCyr-Italic.ttf');
+}
+
+@font-face {
+	font-family: 'AvenirLight';
+	src: url('/fonts/avenir-next/AvenirNextCyr-Light.ttf');
+		:url('/fonts/avenir-next/AvenirNextCyr-LightItalic.ttf');
+}
+
+@font-face {
+	font-family: 'AvenirThin';
+	src: url('/fonts/avenir-next/AvenirNextCyr-Thin.ttf');
+		:url('/fonts/avenir-next/AvenirNextCyr-ThinItalic.ttf');
+}
+
+@font-face {
+	font-family: 'AvenirUltralight';
+	src: url('/fonts/avenir-next/AvenirNextCyr-UltraLight.ttf');
+		:url('/fonts/avenir-next/AvenirNextCyr-UltraLightItalic.ttf');
+}
+@font-face {
+	font-family: 'Cantarell';
+	src: url('/fonts/Cantarell/Cantarell-Regular.ttf');
+}
+@font-face {
+	font-family: 'CantarellI';
+	src: url('/fonts/Cantarell/Cantarell-Oblique.ttf');
+}
+@font-face {
+	font-family: 'CantarellG';
+	src: url('/fonts/Cantarell/Cantarell-Bold.ttf');
+}
+@font-face {
+	font-family: 'CantarellGI';
+	src: url('/fonts/Cantarell/Cantarell-BoldOblique.ttf');
+}
+
+
+
+/*█████████████████████████████ Objets, Classes, et ID ██████████████████████████████*/
+
+body{
+	margin:0;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(100,100,100);
+  font-size: 1rem;
+  width:100%;
+  max-width:100%;
+  overflow-y:auto;
+}
+
+td, th {
+  border: 1px solid rgb(80,80,80);
+  padding: 10px 10px;
+}
+
+th {
+  background-color: rgb(180,180,180);
+  font-family:AvenirDemi;
+}
+
+td {
+  text-align: center;
+  font-family:AvenirNormal;
+}
+
+.mail{
+	font-family:Logo;
+	text-decoration:none;
+	color:rgba(17,17,17,1);
+	font-size:1.7em;
+	transition:.2s;
+}
+
+.mail:hover{
+	color:rgba(89,89,89,1);
+}
+
+button{
+	padding:0.1em;
+	font-size:1.2em;
+	border:1px solid rgba(25,25,25,1);
+	border-radius:3px;
+	width:1.5em;
+	height:1.5em;
+	cursor:pointer;
+	transition:.2s;
+}
+
+button:hover{
+	background-color:rgba(255,35,35,0.95);
+	color:white;
+}

@@ -1,0 +1,1819 @@
+:root{
+	--font-size-h1:4.5em;
+}
+
+/*█████████████████████████████ Taille de la fenêtre ██████████████████████████████*/
+
+/*Meteo et avertissement + body*/
+@media only screen and (max-width: 887px) {
+	/*Variables*/
+	:root{
+		--largeur-body:95%;
+		--padding-body:2.5%;
+	}
+	#ombre, #meteo, #avertissement{
+		display:none;
+	}
+	.detailChamp {
+		display:inline-block;
+		position:relative;
+		width: 65%%;
+		margin-top: 22px;
+		transform: translateY(-5px);
+	}
+	.detailChamp::before {
+		border-top: 14px solid rgb(51, 125, 2);
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		transform: rotate(180deg) translateY(28px);
+	}
+}
+
+@media only screen and (max-width: 200px) {
+	#avertissement{
+		display:block;
+	}
+	header, nav, section, footer, .liens{
+		display:none;
+	}
+	
+}
+
+@media only screen and (min-width: 887px) {
+	:root{
+		--largeur-body:55%;
+		--padding-body:22.5%;
+	}
+	#avertissement {
+		display: none;
+	}
+	html {
+		background-image: url('/img/fnd.jpeg');
+	}
+	#outils{
+		position:fixed;
+		top:50%;
+		width:15%;
+		right:79%;
+		transform:translateY(-50%);
+	}
+	#flecheDeconnexion {
+		position: fixed;
+		bottom: 3rem;
+		right: 50px;
+	}
+	#flecheDeconnexion::after {
+		display: block;
+		position: absolute;
+		right:-25px;
+		font-size: 1rem;
+	}
+	.detailChamp {
+		position: absolute;
+		width: 35%;
+		margin-left: 20px;
+		transform: translateY(-5px);
+	}
+	.detailChamp::before {
+		border-left: 14px solid rgb(51, 125, 2);
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+		transform: rotate(180deg) translateX(35px);
+	}
+}
+
+@media only screen and (max-width: 448px) {
+	:root{
+		--largeur-body:100%;
+		--padding-body:0%;
+	}
+	.divEvenement{
+		margin:10px 2.5%;
+	}
+}
+
+/*Stroke h1 et h2*/
+@media only screen and (min-width: 634px) {
+	:root{
+		--stroke-h1:3px;
+		--stroke-h2:2px;
+	}
+}
+
+@media only screen and (max-width: 634px) {
+	:root{
+		--stroke-h1:2px;
+		--stroke-h2:1px;
+	}
+}
+
+/*nav*/
+@media only screen and (min-width: 448px) {
+	nav{
+		display:flex;
+	}
+	.sousNav{
+		flex:1;
+		display:inline;
+	}
+	.divEvenement{
+		margin:10px auto;
+	}
+	/*Img float ou non*/
+	.imgL{
+		float:left;
+	}
+	.imgR{
+		float:right;
+	}
+	.imgR,.imgL{
+		margin:8px 15px;
+		width:35%
+	}
+	.unTemoignage{
+		display:flex;
+	}
+}
+
+@media only screen and (max-width: 448px) {
+	.sousNav{
+		display:block;
+		font-size:110%;
+	}
+	#spanTopNav{
+		border-bottom:1px solid rgba(122,180,29,1);
+	}
+	/*Img float ou non*/
+	.imgL, .imgR {
+		width:80%;
+		max-height:90%;
+	}
+	.centerPhoto {
+		margin-left: auto;
+		margin-right: auto;
+		width: min-content;
+	}
+
+	.unTemoignage h4{
+		text-align:center;
+	}
+}
+
+/*Taille police Header*/
+@media only screen and (max-width: 445px) and (min-width: 380px){
+	header{
+		font-size:90%;
+	}
+}
+@media only screen and (max-width: 380px) and (min-width: 340px){
+	header{
+		font-size:80%;
+	}
+}
+@media only screen and (max-width: 340px) and (min-width: 200px){
+	header{
+		font-size:65%;
+	}
+}
+
+/*Formulaire événement*/
+@media only screen and (min-width: 570px){
+	.divEvenement form fieldset>div{
+		display:flex;
+	}
+	.divEvenement fieldset input[type="text"],.divEvenement fieldset input[type="date"]{
+		width:90%;
+		max-width:min-content;
+	}
+}
+
+@media only screen and (max-width: 570px){
+	.divEvenement fieldset input[type="text"],.divEvenement fieldset input[type="date"]{
+		width:auto;
+	}
+}
+
+/*Footer*/
+@media only screen and (max-width: 707px) {
+	footer .flexFooter>div{
+		padding:20px 15px;
+		border-bottom:2px solid rgba(245,245,245,0.5)
+	}
+	footer .flexFooter>div{
+		padding:20px 15px;
+	}
+	footer .flexFooter>div:first-child{
+		padding-top:3px;
+	}
+	footer .flexFooter>div:last-child{
+		padding-bottom:3px;
+	}
+	.logoFooter{
+		font-size:2.6em;
+	}
+}
+@media only screen and (min-width: 707px) {
+	.flexFooter{
+		display:flex;
+	}
+	footer .flexFooter>div{
+		flex:1;
+		padding:3px 15px;
+		border-right:1px solid rgba(245,245,245,0.2)
+	}
+	.logoFooter{
+		font-size:2em;
+	}
+}
+
+
+/*█████████████████████████████ Polices ██████████████████████████████*/
+
+@font-face {
+	font-family: 'Titre';
+	src: url('/fonts/oswald/Oswald-Light.ttf');
+}
+
+@font-face {
+	font-family: 'Logo';
+	src: url('/fonts/typeecon.otf');
+}
+
+@font-face {
+	font-family: 'AvenirMedium';
+	src: url('/fonts/avenir-next/AvenirNextCyr-Medium.ttf');
+		:url('/fonts/avenir-next/AvenirNextCyr-MediumItalic.ttf');
+}
+
+@font-face {
+	font-family: 'AvenirHeavy';
+	src: url('/fonts/avenir-next/AvenirNextCyr-Heavy.ttf');
+		:url('/fonts/avenir-next/AvenirNextCyr-HeavyItalic.ttf');
+}
+
+@font-face {
+	font-family: 'AvenirDemi';
+	src: url('/fonts/avenir-next/AvenirNextCyr-Demi.ttf');
+		:url('/fonts/avenir-next/AvenirNextCyr-DemiItalic.ttf');
+}
+
+@font-face {
+	font-family: 'AvenirBold';
+	src: url('/fonts/avenir-next/AvenirNextCyr-Bold.ttf');
+		:url('/fonts/avenir-next/AvenirNextCyr-BoldItalic.ttf');
+}
+
+@font-face {
+	font-family: 'AvenirNormal';
+	src: url('/fonts/avenir-next/AvenirNextCyr-Regular.ttf');
+		:url('/fonts/avenir-next/AvenirNextCyr-Italic.ttf');
+}
+
+@font-face {
+	font-family: 'AvenirLight';
+	src: url('/fonts/avenir-next/AvenirNextCyr-Light.ttf');
+		:url('/fonts/avenir-next/AvenirNextCyr-LightItalic.ttf');
+}
+
+@font-face {
+	font-family: 'AvenirThin';
+	src: url('/fonts/avenir-next/AvenirNextCyr-Thin.ttf');
+		:url('/fonts/avenir-next/AvenirNextCyr-ThinItalic.ttf');
+}
+
+@font-face {
+	font-family: 'AvenirUltralight';
+	src: url('/fonts/avenir-next/AvenirNextCyr-UltraLight.ttf');
+		:url('/fonts/avenir-next/AvenirNextCyr-UltraLightItalic.ttf');
+}
+@font-face {
+	font-family: 'Cantarell';
+	src: url('/fonts/Cantarell/Cantarell-Regular.ttf');
+}
+@font-face {
+	font-family: 'CantarellI';
+	src: url('/fonts/Cantarell/Cantarell-Oblique.ttf');
+}
+@font-face {
+	font-family: 'CantarellG';
+	src: url('/fonts/Cantarell/Cantarell-Bold.ttf');
+}
+@font-face {
+	font-family: 'CantarellGI';
+	src: url('/fonts/Cantarell/Cantarell-BoldOblique.ttf');
+}
+
+
+
+/*█████████████████████████████ Objets, Classes, et ID ██████████████████████████████*/
+
+#avertissement{
+	font-family:Cantarell;
+	text-align:center;
+	color:rgba(240,65,65,1);
+	font-size:1.2em;
+}
+
+body{
+	width:var(--largeur-body);
+	padding:0 var(--padding-body);
+	margin:0 auto;
+}
+
+html {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+section{
+	background-color:rgba(200,200,200,1);
+	padding:5px 30px;
+}
+
+section p{
+	font-family:'Cantarell';
+	text-align:justify;
+	text-indent:8%;
+	letter-spacing:-0.5px;
+}
+
+section h3{
+	font-family:'AvenirDemi';
+	font-size:1.5em;
+}
+
+#apercu {
+	font-family: 'AvenirDemi';
+	border: 3px solid rgb(0, 20, 68);
+	background-color: rgb(0, 67, 125);
+	color: rgb(206, 222, 255);
+}
+
+#apercu:hover {
+	border: 3px solid rgb(0, 67, 125);
+	background-color: rgb(0, 20, 68);
+	color: rgb(206, 222, 255);
+}
+
+
+section a{
+	color:rgba(9,91,0,1);
+	transition:0.15s;
+	text-decoration:underline;
+	cursor:pointer;
+}
+
+section a:hover{
+	color:rgba(49,131,36,1);
+}
+
+header{
+	margin:0;
+	background-image:url('/img/potager.jpeg');
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:bottom 100% right 0;
+	padding:10% 0;
+}
+
+header h1, header h2{
+	margin:0;
+	text-align:center;
+	font-family:AvenirDemi;
+	color:white;
+	text-shadow:0 0 10px rgba(255,255,255,1);
+}
+
+header h1{
+	font-size:var(--font-size-h1);
+	-webkit-text-stroke:var(--stroke-h1);
+	-webkit-text-stroke-color:rgba(0,95,0,1);
+}
+
+header h2{
+	font-size:3em;
+	-webkit-text-stroke:var(--stroke-h2);
+	-webkit-text-stroke-color:rgba(0,95,0,1);
+}
+
+nav{
+	z-index:9;
+	width:100%;
+	background-color:rgba(24,106,11,1);
+	padding:2px 0;
+	box-shadow:0 2px 2px black;
+}
+
+.sousNav>div{
+	width:100%;
+	display:flex;
+}
+
+nav a{
+	text-decoration:none;
+	font-size:1.3em;
+	color:rgba(122,255,29,1);
+	font-family:'AvenirNormal';
+	text-align:center;
+	transition:0.2s;
+	background-color:rgba(24,106,11,1);
+}
+
+.sousLienNav{
+	opacity:0;
+	z-index:-9999999999;
+	transition:.3s;
+	position:absolute;
+	transform: translateY(2px);
+	background-color:rgba(9, 68, 0,1);
+}
+
+.sousLienNav a{
+	background-color:rgba(9, 68, 0,1);
+	display:inline-block;
+	padding:4px 8px 4px 20px;
+	font-size:1.2em;
+	width:-moz-available;
+	text-align:left;
+	transition:.6s;
+}
+
+.sousLienNav a span::before{
+	content:">>";
+	width:10px;
+	letter-spacing:-.68em;
+	font-size:80%;
+	display:inline-block;
+	position:absolute;
+	transform:translateX(-30px) translateY(15%);
+	transition:.3s;
+	font-family:AvenirDemi;
+}
+
+.lienPage:hover .sousLienNav a{
+	padding-left:40px;
+}
+
+.sousLienNav a:hover span::before{
+	letter-spacing:-.2em;
+	transform:translateX(-20px) translateY(15%);
+}
+
+div:hover>.sousLienNav{
+	opacity:1;
+	z-index:9999999999;
+}
+
+nav a span{
+	width:100%;
+	display:inline-block;
+}
+
+.lienPage{
+	flex:1;
+}
+
+nav a:hover{
+	color:rgba(202,255,109,1);
+	background-color:rgba(9,91,0,1);
+}
+
+nav em{
+	width:1px;
+	height:auto;
+	background-color:rgba(122,180,29,1);
+}
+
+footer{
+	width:88%;
+	background-color:rgba(11,11,11,0.99);
+	color:rgba(255,255,255,0.95);
+	box-shadow:0 -2px 2px rgba(0,0,0,0.6);
+	font-family:AvenirLight;
+	padding:32px 6%;
+}
+
+footer a{
+	color:rgba(49,131,36,1);
+	transition:0.15s;
+}
+
+footer a:hover{
+	color:rgba(100,182,87,1);
+}
+
+footer .flexFooter>:last-child{
+	border:0;
+}
+
+footer h4{
+	font-size:1.4em;
+	margin:0;
+	font-weight:bolder;
+	font-family:AvenirNormal;
+}
+
+footer h4:first-letter{
+	font-size:1.4em;
+	margin:0;
+	font-weight:bolder;
+	font-family:AvenirMedium;
+}
+
+footer ul{
+	margin:0;
+	padding-left:22px;
+}
+
+footer p{
+	margin:0;
+}
+
+#copyright{
+	text-align:right;
+}
+
+.navFixed{
+	position:fixed;
+	top:0;
+	width:var(--largeur-body);
+}
+
+.enteteFixed{
+	position:sticky;
+	top:0;
+	z-index:5;
+}
+
+#meteo{
+	position:fixed;
+	top:3%;
+	right:1.5%;
+}
+
+#meteo img{
+	width:100%;
+}
+
+#combleNav{
+	display:none;
+	padding:0;
+	margin:0;
+}
+
+aside{
+	border:3px solid rgba(0,95,0,1);
+	border-radius:5px;
+	padding:20px;
+	background-color:rgba(228,228,228,1);
+}
+
+aside h4{
+	text-align:left;
+	font-size: 1.35em;
+	font-family: 'AvenirDemi';
+	color: rgba(255,255,255,1);
+	margin: 0;
+	display: inline-block;
+	word-wrap: break-word;
+	-webkit-text-stroke: 1px rgba(13, 13, 13, 0.4);
+}
+
+aside .dateB{
+	font-family:'CantarellG';
+	width:33%;
+	text-align:right;
+	display:inline-block;
+}
+
+aside p{
+	font-family:'Cantarell';
+	text-indent:0;
+	letter-spacing:-0.7px;
+}
+
+.billet div{
+	font-family:'Cantarell';
+	font-size:1.1em;
+}
+
+aside img, .dialogContainer p img{
+	margin-left:50%;
+	transform:translateX(-50%);
+}
+
+aside div{
+	word-wrap:break-word;
+}
+
+aside img{
+	max-width:50%;
+}
+
+form{
+	font-family:Cantarell;
+}
+
+form input{
+	margin-bottom:3px;
+}
+
+#lienAdmin,#lienAPropos{
+	text-align:center;
+	display:block;
+}
+
+#nouveauBillet .titre, #billetModifie .titre{
+	width:75%;
+}
+
+.Billet{
+	max-height:75vh;
+	overflow:auto;
+	padding:0;
+}
+
+#BilletIndex{
+	max-height:400px;
+}
+
+.Billet img{
+	max-width:45%;
+	max-height:30vh;
+}
+
+.dialog{
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	margin:0;
+	padding:0;
+	background-color:rgba(255,255,255,0.9);
+	transition:.4s;
+	z-index:9999;
+}
+
+.dialogContainer{
+	opacity:0;
+	border:2px solid black;
+	margin:0% auto;
+	padding:30px 30px;
+	width:65%;
+	background-color:rgba(255,255,255,1);
+	font-family:AvenirNormal;
+	font-size:130%;
+	text-align:center;
+	color:black;
+	transition:.3s;
+	height:min-content;
+}
+
+.dialogContainer button[id="fermer"]{
+	position:absolute;
+	margin:-30px 0 0 0;
+	right:0;
+	padding:0 10px;
+	font-size:3em;
+	font-weight:10;
+	color:rgab(0,0,0,1);
+	border:0;
+	font-family:AvenirLight;
+	width:auto;
+}
+
+.dialogContainer button{
+	background-color:white;
+	padding:7px 7px;
+	width:38%;
+	border:2px solid black;
+	font-family:AvenirDemi;
+	font-size:1em;
+	transition:.18s;
+}
+
+.dialogContainer button:hover{
+	background-color:rgba(0,0,0,1);
+	color:rgba(255,255,255,1);
+}
+
+.dialog h1{
+	font-family:AvenirDemi;
+	margin:20px 0;
+}
+
+.dialog h2{
+	font-size:120%;
+	font-family:AvenirNormal;
+	font-weight:bold;
+	text-align:left;
+	text-decoration:underline;
+	margin:0;
+}
+
+.logoFooter{
+	position:relative;
+	font-family:Logo;
+	text-decoration:none;
+	transition:.2s;
+	flex:1;
+	text-align:center;
+}
+
+.logoFooter:hover{
+	opacity:0.5;
+}
+
+#banniereLogos{
+	display:flex;
+	margin:0 0 0 1px;
+}
+
+footer h5{
+	margin:0;
+	text-decoration:underline;
+	font-size:1em;
+	margin-left:5px;
+}
+
+.apercuBlog{
+	color:black;
+	text-decoration:none;
+	transition:0.3s;
+}
+
+.apercuBlog:hover{
+	color:black;
+}
+
+#pagesBlog{
+	margin:auto;
+	width:max-content;
+	cursor:default;
+}
+
+#pagesBlog input{
+	width:50px;
+	text-align:center;
+}
+
+#pagesBlog em{
+	transform:translateY(6px);
+}
+
+#pApercu::before{
+	content:"Aperçu :";
+	text-decoration:underline;
+	font-weight:bolder;
+	color:rgba(100,100,230,1);
+}
+
+#pEcrit::before{
+	content:"Texte saisi :";
+	text-decoration:underline;
+	font-weight:bolder;
+	color:rgba(100,100,230,1);
+	display:block;
+	margin-bottom:1rem;
+}
+
+.Billet em{
+	width:100%;
+}
+
+aside hr{
+	transition:0.3s;
+	width:25%;
+	height:2px;
+	border:2px inset red;
+	background-color:red;
+	margin-top:15px;
+	margin-left:0;
+}
+
+.Billet:hover .enteteBillet hr{
+	width:50%;
+}
+
+.apercuBlog:hover hr{
+	width:50%;
+}
+
+.visible{
+	display:visible;
+}
+
+.none{
+	display:none;
+}
+
+.enteteBillet{
+	background-color:rgba(86,168,58,0.92);
+	padding:20px;
+	display:block;
+}
+
+.spanContent{
+	font-family:'Cantarell';
+	margin:0 20px 20px 20px;
+	display:block;
+}
+
+#dialogContent{
+	display:flex;
+	height:min-content;
+}
+
+#pEcrit, #pApercu{
+	flex:1;
+	text-align:left;
+	padding:0 7px 3px 7px;
+	height:min-content;
+}
+
+#dialogContent em{
+	margin-top:10px;
+	border:1px solid black;
+	width:3px;
+	height:100%;
+	background-color:rgba(100,100,100,1);
+}
+
+button{
+	cursor:pointer;
+}
+
+.lienGris{
+	color:grey;
+	cursor:default;
+}
+
+.lienGris:hover{
+	color:grey;
+}
+
+.lirePlus{
+	opacity:0;
+	transform:translateY(-100%);
+	position:absolute;
+	background-color:rgba(25,142,78,0.85);
+	padding:0;
+	border:3px solid rgba(0,0,0,0);
+	transition:.4s;
+}
+
+.lirePlus span{
+	font-family:AvenirBold;
+	font-size:3.3em;
+	color:white;
+	margin: auto;
+	top:100%;
+	position: relative;
+	float:left;
+	left:100%;
+	transform:translateX(-130%)translateY(-115%);
+	opacity:0;
+	width:66%;
+	transition:.3s;
+}
+
+.apercuBlog:hover .lirePlus{
+	opacity:1;
+}
+
+
+.apercuBlog:hover .lirePlus span{
+	transform:translateX(-100%)translateY(-115%);
+	opacity:1;
+}
+
+#logoBlog{
+	float:right;
+	margin-top:10px;
+	max-width:25%;
+}
+
+section[class="liens"]{
+	display:flex;
+}
+
+section[class="liens"] a {
+	text-decoration: none;
+	font-weight: 10;
+	flex: 1;
+	text-align: center;
+	font-family: AvenirMedium;
+	border-right: 2px solid;
+}
+section[class="liens"] a:last-child{
+	border-right: 0;
+}
+
+div[id="importerPhoto"]{
+	border-radius:3px;
+	margin:0 auto;
+	border:3px solid black;
+	width:67%;
+	padding:10px 15px;
+}
+
+div[id="importerPhoto"] h3{
+	margin:0 0 10px;
+	text-align:center;
+}
+
+input[type="file"]{
+	margin:3px auto;
+	display:block;
+}
+
+#formEvenement label{
+	font-family:AvenirDemi;
+}
+
+.flex{
+	display:flex;
+}
+
+.flexLeft{
+	width:max-content;
+	margin-right:10px;
+}
+
+.flexRight{
+	flex:1;
+}
+
+.divEvenement{
+	border-radius:25px 3px 30px 3px;
+	width:max-content;
+	min-width:60%;
+	padding:12px;
+	font-family:Cantarell;
+	max-width:90%;
+}
+
+.nomEvenement{
+	border-radius:10px 2px;
+	margin:-15px 0 0 -15px;
+	width:max-content;
+	min-width:30%;
+	padding:3px 5px;
+	transform:translateY(-7px) translateX(-15px);
+	font-size:1.55em;
+	text-align:center;
+	font-family:AvenirNormal;
+}
+
+.reunion .nomEvenement{
+	background-color:rgba(255,150,150,1);
+	border:3px solid rgba(220,0,0,1);
+}
+
+.rendez-vous .nomEvenement{
+	background-color:rgba(124, 232, 94,1);
+	border:3px solid rgba(25,115,0,1);
+}
+
+.intervention .nomEvenement{
+	background-color:rgba(157,206,249,1);
+	border:3px solid rgba(0,102,78,1);
+}
+
+.sortie .nomEvenement{
+	background-color:rgba(224,249,107,1);
+	border:3px solid rgba(168,98,24,1);
+}
+
+.reunion{
+	background-color:rgba(255,150,150,.3);
+	border:3px solid rgba(220,0,0,1);
+}
+
+.rendez-vous {
+	background-color: rgba(56, 187, 9, 0.64);
+	border: 3px solid rgb(29, 138, 7);
+}
+
+.intervention {
+	background-color: rgba(9, 137, 187, 0.3);
+	border: 3px solid rgb(33, 145, 97);
+}
+
+.sortie {
+	background-color: rgba(187, 109, 9, 0.4);
+	border: 3px solid rgb(149, 126, 5);
+}
+
+.places{
+	float:right;
+	font-family:CantarellG;
+	background-color:rgba(255,255,255,0.7);
+	padding:0 0 2px 3px;
+	margin:-2em 0 5px 5px;
+	text-align:right;
+}
+
+.lieu,.dateDbt{
+	font-size:1em;
+	color:rgba(0,0,0,0.8);
+	text-shadow:0 0 2px rgba(255,255,255,0.8);
+	font-style:italic;
+	font-weight:0;
+}
+
+.divEvenement img{
+	margin-left:5%;
+	width:auto;
+	height:1em;
+}
+
+.divEvenement h3{
+	margin:0 3px 0 0;
+	font-family:AvenirDemi;
+	font-size:1.6em;
+}
+
+.divEvenement .spanContent{
+	margin:5px 0;
+	padding:5px 5%;
+	background-color:rgba(255,255,255,0.4);
+	border-radius:2px;
+}
+
+.bouttonParticiper{
+	border:2px solid rgba(0,0,0,0.9);
+	background-color:rgba(255,255,255,0.8);
+	box-shadow:3px 3px 4px rgba(0,0,0,0.3);
+}
+
+.bouttonParticiper:hover{
+	color:rgba(0,100,0,1);
+}
+
+.spanComplet {
+	background-color: rgba(255,50,50,1);
+	box-shadow:0 0 8px rgba(255,255,255,0.5);
+	color: white;
+	font-family: AvenirBold;
+	font-size: 1.8em;
+	padding: 2px 5px;
+	transform: rotate(-15deg) translateY(-120%) translateX(11.5%);
+	float: right;
+	line-height:1em;
+	text-align:center;
+}
+
+.participerLeft,.participerRight{
+	flex:1;
+	margin:0 5px;
+	padding:3px 2px;
+}
+
+.participerRight input[type="checkbox"]{
+	margin-top:10px;
+}
+
+.participerRight strong{
+	font-family:AvenirDemi;
+}
+
+.divEvenement fieldset{
+	margin-top:10px;
+	border:2px solid black;
+	border-radius:0 0 15px 0;
+	background-color:rgba(245,245,245,0.45);
+}
+
+.divEvenement fieldset legend{
+	font-family:AvenirBold;
+	font-size:1.3em;
+	border:2px solid black;
+	border-radius:0 0 7px 0;
+	background-color:rgba(245,245,245,1);
+}
+
+.divEvenement fieldset input[type="text"],.divEvenement fieldset input[type="date"]{
+	border:1px solid black;
+	padding:4px 7px;
+	border-radius:4px 2px;
+}
+
+.divEvenement fieldset input[type="submit"]{
+	flex:0;
+	margin-left:50%;
+	transform:translateX(-50%);
+}
+
+.divEvenement form{
+	transition:.5s;
+	opacity:0;
+	transform:translateY(-10%);
+}
+
+.obligatoire::after{
+	content:" (*)";
+	color:red;
+	font-weight:bold;
+	font-style:normal;
+}
+
+section>h4{
+	font-family:AvenirDemi;
+	text-indent:10%;
+	text-decoration:underline;
+	font-size:130%;
+}
+
+.sousAPropos > h4 {
+	font-family: AvenirNormal;
+	text-indent: 0;
+	font-size: 140%;
+	text-decoration: none;
+	line-height: 110%;
+	letter-spacing: -.5px;
+	word-spacing: 3px;
+	width:max-content;
+	max-width:100%;
+	word-wrap:break-word;
+}
+
+.sousAPropos > h4::after {
+	height: 1px;
+	width: 0%;
+	background-color: rgba(0,0,0,0);
+	content: "";
+	position: relative;
+	display: block;
+	margin: 0;
+	transition: background-color .7s step-end, width .7s cubic-bezier(.59,0,.49,.99);
+}
+
+.sousAPropos:hover > h4::after {
+	background-color: rgb(0,0,0);
+	width: 100%;
+	transition:background-color .7s step-start, width .7s cubic-bezier(.59,0,.49,.99);
+}
+
+section p strong{
+	font-family: AvenirDemi;
+}
+
+input[name="titre"]{
+	max-width:370px;
+	width:60%;
+}
+
+.prochainEvenement{
+	border:2px solid rgba(100,100,100,1);
+	border-radius:3px;
+	padding:10px 3.5%;
+	background-color:rgba(232,232,232,1);
+}
+
+.prochainEvenement h4{
+	font-size:1.3em;
+	color:rgba(170,40,40,1);
+	margin:5px 0;
+	font-family:AvenirDemi;
+	text-decoration:underline;
+}
+
+.prochainEvenement h5{
+	font-size:1.05em;
+	color:rgba(85,85,85,1);
+	margin:5px 0;
+	font-family:AvenirNormal;
+}
+
+.prochainEvenement h5 strong{
+	color:rgba(20,75,180,1);
+}
+
+.photos {
+	display: inline-block;
+	width: auto;
+	max-width:100%;
+	height:200px;
+	margin: 3px 3px;
+	padding: 4px;
+	border-radius: 3px;
+	background-color: rgba(224,224,224,1);
+	box-shadow:2px 2px 4px rgba(100,100,100,0.45);
+	transition:.17s;
+}
+
+a:hover .photos{
+	box-shadow:2px 2px 8px rgba(25,25,25,1);
+}
+
+.datePhotos{
+	font-family:AvenirNormal;
+	margin-bottom:0;
+	font-size:1.2em;
+}
+
+.hrPhotos {
+	width: 25%;
+	height: 1px;
+	border: 1px solid rgba(120,120,120,1);
+	border-radius: 0 10px 10px 0;
+	margin: 4px 0 8px 0;
+	transition: .55s cubic-bezier(.71,-0.64,.43,1.07);
+	background-color: rgba(120,120,120,1);
+}
+.photoJour:hover .hrPhotos{
+	width:67%;
+	background-color:rgba(100,100,100,1);
+	border-color:rgba(100,100,100,1);
+}
+
+.photoJour {
+	margin: 25px 2%;
+	padding: 15px;
+	background-color: rgba(255,255,255,.25);
+	transition:.3s;
+	border-radius:3px;
+}
+
+.photoJour h4{
+	margin-top:3px;
+}
+
+.photoJour:hover {
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+#Message input[type="text"], #Message textarea{
+	border:1px solid rgba(200,200,200,1);
+	border-radius:6px;
+	padding:7px 12px;
+	transition:.3s;
+	font-family:Cantarell;
+	width:90%;
+}
+
+#Message input[type="text"]:focus, #Message textarea:focus{
+	box-shadow:0 0 5px rgba(100,230,10,1);
+}
+
+#Presentation img{
+	height:auto;
+	border-radius:2px;
+	border:3px solid rgba(245,245,245,0.95);
+	min-width:200px;
+}
+
+.tete {
+	position:relative;
+	border: 2px solid white;
+	border-radius: 50%;
+	transform: translateX(-50%) translateY(-7px);
+	width: 82px;
+	height: 82px;
+}
+
+.bulle{
+	transform: translateX(50%);
+	width:100px;
+	height:100px;
+}
+
+.temoignage{
+	flex:1;
+}
+
+.temoignage p {
+	text-indent: 20px;
+	text-align: left;
+	font-size: 15px;
+	background-color:rgba(230,230,230,1);
+	border-radius:2px;
+	padding:15px 25px 18px 25px;
+}
+
+.contenuTemoignage::before{
+	content:"";
+	display:inline-block;
+	background-image:url('/img/guillemet.png');
+	background-size:100% auto;
+	width:3em;
+	height:3em;
+	transform:translateY(-15px);
+}
+
+.contenuTemoignage::after {
+	content: "";
+	display: inline-block;
+	background-image: url('/img/guillemet.png');
+	background-size: 100% auto;
+	width: 1.8em;
+	height: 1.8em;
+	position:absolute;
+	transform: scaleX(-1) scaleY(-1) translateY(-10px) translateX(-5px);
+}
+
+.personne{
+	flex:initial;
+}
+
+.temoignage h4{
+	margin:25px 0 0 0;
+	line-height:100%;
+	font-family:'AvenirDemi';
+	font-size:1.5em;
+}
+
+.temoignage h4 em{
+	font-family:AvenirThin;
+	font-size:75%;
+	display:block;
+}
+
+nav a{
+	cursor:pointer;
+	user-select:none;
+}
+
+#ombre {
+	position: fixed;
+	height:100%;
+	top: 0;
+	left: 0;
+	width: var(--largeur-body);
+	z-index: -1;
+	margin: 0 var(--padding-body);
+	box-shadow: 1px 1px 30px black;
+}
+
+.explications{
+	border:2px solid rgba(75,75,75,0.8);
+	background-color:rgba(205,205,205,1);
+	border-radius:2px;
+	padding:7px 15px;
+}
+
+.supprimer{
+	background-color:rgba(255,50,50,1);
+	color:white;
+	border:3px solid red;
+}
+
+.supprimer:hover{
+	background-color:red;
+	color:white;
+	border:3px solid rgba(255,50,50,1);
+}
+
+section > h2 {
+	text-align: center;
+	font-family: AvenirDemi;
+	color: rgb(59, 210, 43);
+	font-size: 2em;
+	margin: 0;
+	background-color: rgb(10, 74, 0);
+	padding: 5px 0;
+}
+
+#outils{
+	background-color:rgba(0,0,0,0.85);
+	border:3px outset rgba(0,0,0,0.8);
+	padding:3px 10px 10px 10px;
+	border-radius:3px;
+	line-height:2.2em;
+}
+
+#outils strong{
+	font-family:Cantarell;
+	color:rgba(220,220,220,1);
+	background-color:rgba(0,0,0,0.5);
+	padding:2px 3px;
+	border:3px solid rgba(0,0,0,1);
+	text-align:center;
+	transition:.25s;
+}
+
+#outils h4{
+	font-size:1.1em;
+	margin:4px 0 7px 0;
+	color:white;
+	font-family:AvenirDemi;
+	line-height:1.2em;
+}
+
+#outils strong:hover{
+	cursor:pointer;
+	color:rgba(0,0,0,0.65);
+	background-color:rgba(220,220,220,1);
+}
+
+#flecheDeconnexion {
+	font-family: AvenirHeavy;
+	font-size: 35px;
+	color: rgb(24, 106, 11);
+	cursor: pointer;
+	float: right;
+}
+
+#sectionDeconnexion{
+	font-size:35px;
+}
+
+#flecheDeconnexion::after {
+	content: "Se déconnecter";
+	width: max-content;
+	font-family:AvenirDemi;
+	text-shadow:0 0 5px rgba(255,255,255,1);
+	margin-left:25px;
+}
+
+#flecheDeconnexion label{
+	z-index:2;
+	position:relative;
+	display:inline-block;
+	cursor:pointer;
+	transition:.3s;
+	transition-delay:0s;
+}
+
+#flecheDeconnexion svg {
+	transform:translateX(-10px) translateY(2.5px);
+	z-index:1;
+	position:absolute;
+	cursor:pointer;
+	display:inline-block;
+}
+
+
+#flecheDeconnexion rect {
+	stroke-width: 4px;
+	stroke: rgb(24, 106, 11);
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-dasharray: 140 0;
+	stroke-dashoffset: -50;
+	fill: rgba(255,255,255,0.7);
+	transition: stroke-dashoffset .5s, stroke-dasharray .5s;
+	transition-delay: .3s,.3s;
+	transition-property: stroke-dashoffset,stroke-dasharray;
+}
+
+#flecheDeconnexion:hover rect{
+	stroke-dasharray: 80 25;
+	stroke-dashoffset: -63;
+	transition-delay: 0s,0s;
+}
+
+#flecheDeconnexion:hover label{
+	transform:translateX(23px);
+	transition:.75s;
+	transition-delay: .3s;
+	transition-property: transform;
+}
+
+input[type="submit"], input[type="button"]{
+	cursor:pointer;
+	margin:3px 5px;
+	font-family: Cantarell;
+	font-size:1em;
+	border-radius: 3px;
+	padding: 2px 8px;
+	transition: .3s;
+}
+
+.envoyer {
+	border: 3px solid rgba(10, 10, 10,1);
+	background-color: rgb(50, 50, 50);
+	color: rgb(255,255,255);
+}
+
+.envoyer:hover{
+	border: 3px solid rgb(59, 147, 20);
+	background-color: rgb(230, 230, 230);
+	color: rgb(8, 108, 0);
+}
+
+.voletCache{
+	display:none;
+}
+
+.tireVolet{
+	font-family:AvenirDemi;
+	font-size:1em;
+	text-align:center;
+	display:inline-block;
+	width:100%;
+	transition:.3s;
+}
+
+.tireVolet:hover{
+	color:rgba(50,50,50,1);
+}
+
+.prochainEvenement .tireVolet{
+	cursor:pointer;
+}
+
+aside .titreB{
+	text-align:left;
+}
+
+input[type="text"],input[type="password"],select,input[type="date"],input[type="time"],input[type="number"],textarea{
+	border:2px solid black;
+	padding:5px 10px;
+	transition:.3s;
+	border-radius:4px;
+	max-width:95%;
+}
+
+input[type="text"]:focus,select:focus,input[type="date"]:focus,input[type="time"]:focus,input[type="number"]:focus,textarea:focus{
+	border:2px solid rgba(50,50,50,1);
+	box-shadow:2px 2px 4px black;
+}
+
+textarea{
+	width:95%;
+	max-height:80vh;
+	min-height:45vh;
+	font-family:Cantarell;
+	resize:vertical;
+}
+
+#logoPhoto {
+	cursor: pointer;
+	font-size: 2em;
+	margin-bottom: .2em;
+	transition: .3s;
+	display: block;
+}
+
+#logoPhoto:hover{
+	font-size:2.4em;
+	margin-bottom:0;
+}
+
+input[type="text"][class="lienPhoto"]{
+	width:75%;
+}
+
+input[type="text"][class="lienPhoto"]:hover{
+	width:75%;
+	background-color:rgba(200,200,255,1);
+}
+
+input[type="submit"]:disabled{
+	border-color:rgba(100,100,100,1);
+	background-color:rgba(200,200,200,1);
+	color:rgba(0,0,0,1);
+	opacity:0.75;
+	cursor:not-allowed;
+}
+
+input[type="submit"]:disabled:hover{
+	border-color:rgba(100,100,100,1);
+	background-color:rgba(200,200,200,1);
+	color:rgba(0,0,0,1);
+	opacity:0.75;
+}
+
+.center{
+	margin:0 auto;
+	width: min-content;
+}
+
+#listePhotos{
+	
+}
+
+#numBillet {
+	width: 3.5em;
+	border: 2px solid rgba(120,120,120,1);
+	appearance: textfield;
+	-webkit-appearance: textfield;
+	cursor:default;
+	user-select:none;
+}
+
+#numBillet:focus {
+	box-shadow: 0px 0px 0px rgba(255,255,255,0);
+}
+
+#numBillet::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+section ul{
+	font-family:AvenirNormal;
+	list-style: disclosure-closed outside;
+	margin-left:8%;
+}
+
+section ul>li{
+	margin-bottom:7px;
+}
+
+section ul>li:last-child{
+	margin-bottom:0;
+}
+
+section ul strong{
+	font-family:AvenirDemi;
+}
+
+ul[class="plan"]{
+	list-style: url outside;
+	margin-left:8%;
+}
+
+ul[class="plan"] a{
+	color:rgb(20,20,20);
+	font-family:AvenirDemi;
+	text-decoration:none;
+}
+
+ul[class="plan"] a:hover{
+	color:rgb(100,100,100);
+}
+
+.detailChamp {
+	border: 4px solid rgb(51, 125, 2);
+	background-color: rgba(150,255,80,1);
+	padding: 8px 15px;
+	font-size: .95em;
+	border-radius: 4px;
+	transition:.4s;
+	opacity:0;
+}
+
+.detailChamp::before {
+	position: absolute;
+	content: "";
+	width: 0;
+	height: 0;
+}
+
+body[class="modifierContenu"] label{
+	font-size:1.2em;
+	font-family:AvenirDemi;
+}
+
+body[class="modifierContenu"] input, body[class="modifierContenu"] textarea{
+	max-width:90%;
+	min-width:30vw;
+	border:0px solid rgba(0,0,0,1);
+	border-radius:0;
+	border-bottom-width:3px;
+	background-color:rgba(250,250,250,0.5);
+	margin-bottom:7px;
+}
+
+body[class="modifierContenu"] select{
+	border:0px solid rgba(0,0,0,1);
+	border-radius:0;
+	border-bottom-width:3px;
+	background-color:rgba(250,250,250,0.5);
+	margin-bottom:7px;
+}
+
+body[class="modifierContenu"] input:focus, body[class="modifierContenu"] textarea:focus, body[class="modifierContenu"] select:focus{
+	box-shadow:0px 0px 0px;
+	background-color:rgba(250,250,250,0.7);
+	border:0px solid rgba(0,0,0,1);
+	border-bottom-width:3px;
+}
+
+body[class="modifierContenu"] textarea{
+	min-height:150px;
+}
+
+body[class="modifierContenu"] label[class="petit"]{
+	font-size:1em;
+	font-family:AvenirNormal;
+}
+
+body[class="modifierContenu"] div[class="info"]{
+	display:inline-block;
+	margin-left:10px;
+}
+
+body[class="modifierContenu"] div[class="info"] i {
+	color: rgba(255,255,255,1);
+	background-color: rgba(0,61,119,1);
+	font-size: 1.2em;
+	cursor: pointer;
+	font-family: AvenirBold;
+	border-radius: 50%;
+	width: 1.2em;
+	display: inline-block;
+	text-align: center;
+	font-style: normal;
+	transition:.3s;
+	position:relative;
+}
+
+body[class="modifierContenu"] div[class="info"]:hover i {
+	z-index:2;
+	color: rgba(0,61,119,1);
+	background-color: rgba(255,255,255,1);
+}
+
+body[class="modifierContenu"] div[class="info"] span {
+	position: absolute;
+	display: none;
+	background-color: rgba(15,80,120,.95);
+	padding: 5px 10px;
+	font-family: AvenirNormal;
+	max-width: 50%;
+	z-index: -9999;
+	transform: translateX(-100%) translateY(-2em);
+	border: 2px solid rgba(0,61,119,1);
+	color: white;
+	border-radius: 4px;
+	transition-timing-function: step-end;
+	margin-left: 2em;
+}
+
+body[class="modifierContenu"] div[class="info"] span a{
+	color:rgba(50,255,100,1);
+	font-family:AvenirDemi;
+}
+
+body[class="modifierContenu"] div[class="info"]:hover span{
+	display:block;
+	z-index:1;
+}
+
+body[class="modifierContenu"] section[id="information"] div {
+	background-color: rgba(0,61,119,1);
+	color: white;
+	border-radius: 2px;
+	padding: 15px 20px 10px 15px;
+	font-family: AvenirNormal;
+}
+
+body[class="modifierContenu"] section[id="information"] h3{
+	margin:0;
+}
+
+body[class="modifierContenu"] section[id="information"] i{
+	float:right;
+	color:rgba(0,61,119,1);
+	background-color:white;
+	width:1.22em;
+	height:1.22em;
+	font-size:1.6em;
+	text-align:center;
+	border-radius:50%;
+	font-family:AvenirBold;
+	font-style:normal;
+}
+
+body[class="modifierContenu"] section[id="information"] a {
+	color: rgb(35, 206, 11);
+}
+
+body[class="modifierContenu"] section[id="information"] strong{
+	font-family:AvenirDemi;
+}
+
+body[class="modifierContenu"] section[id="information"] ul em{
+	font-family:AvenirThin;
+	font-style:normal;
+}
+
+body[class="modifierContenu"] section[id="information"] div[onclick="deroule(this)"]{
+	cursor:pointer;
+}
+
+body[class="modifierContenu"] section[class="modif"]>fieldset {
+	border: 3px solid rgba(0,0,0,1);
+	background-color: rgb(36, 128, 28);
+}
+
+body[class="modifierContenu"] section[class="modif"]>fieldset>legend {
+	font-family: AvenirDemi;
+	font-size: 2em;
+	background-color: rgba(255,255,255,1);
+	border-radius: 4px;
+	border: 3px solid black;
+	padding: 3px 10px;
+	user-select:none;
+}
+
+body[class="modifierContenu"] section[class="modif"] fieldset fieldset {
+	border: 2px solid rgb(4, 64, 1);
+	background-color: rgb(122, 210, 112);
+	border-radius: 4px;
+}
+
+body[class="modifierContenu"] section[class="modif"] fieldset fieldset legend {
+	font-family: AvenirNormal;
+	font-size: 1.5em;
+	background-color: rgba(255,255,255,1);
+	border-radius: 2px;
+	border: 2px solid rgb(10, 95, 5);
+	padding: 1px 4px;
+	user-select:none;
+}
